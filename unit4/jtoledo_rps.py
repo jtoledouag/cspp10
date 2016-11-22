@@ -5,22 +5,19 @@ import random
 #   purpose: present player with options, use input() to get player move
 #   returns: the player's move as either 'r', 'p', or 's'
 def get_p1_move():
-    player_move = input("Choose your option [r|p|s]: ")
-    return player_move    #code here
-
+    j = input("1 = Rock\n2 = Paper\n3 = Scissors\n = Enter a number from 1-3: ")
+    if j == "1":
+        return 's'
+    elif j == "2":
+        return 'r'
+    elif j == "3":  
+        return 'p'
 #function name: get_comp_move():
 #   arguments: none
 #   purpose: randomly generates the computer's move,
 #            either 'r' 'p' or 's'
 #   returns: the computer's randomly generated move
 def get_comp_move():
-    
-
-#function name: get_rounds
-#   arguments: none
-#   purpose: allows the user to choose a number of rounds from 1 to 9.
-#   returns: the user-chosen number of rounds
-def get_rounds():
     comp_move = random.randint(1,3)
     if comp_move == "1":
         return "r"
@@ -28,6 +25,13 @@ def get_rounds():
         return "p"
     else:
         return "s"
+
+#function name: get_rounds
+#   arguments: none
+#   purpose: allows the user to choose a number of rounds from 1 to 9.
+#   returns: the user-chosen number of rounds
+def get_rounds():
+    
 
 #function name: get_round_winner
 #   arguments: player move, computer move
@@ -62,14 +66,19 @@ def print_score(pscore, cscore, ties):
 #   purpose: the main game loop.  This should be the longest, using
 #               all the other functions to create RPS
 #   returns: none
-def rps():
-    #code here
-
+def rps():    #code here
+rounds = get_rounds()
 #function name: tests
-#   arguments: none
-#   purpose: a place for you to write your tests.  replace 'rps' below
+p1move = get_p1_move()
+compmove = get_comp_move()
 #               with 'tests' to run this function instead of the game loop
-#   returns: none
+winner= get_round_winner(p1move,compmove)
+if winner == "player":
+    print("player won !")
+elif winner == "comp":
+    print("computer won !")
+else:
+    print("It's a tie !")
 def test():
     #code here
 
