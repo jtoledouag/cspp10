@@ -31,28 +31,37 @@ def get_comp_move():
 #   purpose: allows the user to choose a number of rounds from 1 to 9.
 #   returns: the user-chosen number of rounds
 def get_rounds():
-    
+    number_of_rounds = input("How many rounds would you like to play?")    
+    return int(number_of_rounds)
 
-#function name: get_round_winner
-#   arguments: player move, computer move
-#   purpose: based on the player and computer's move, determine
-#            the winner or if it's a tie
-#   returns: returns a string based on the following:
-#               "player" if player won
-#               "comp" if computer won
-#               "tie" if it's a tie
 def get_round_winner(p1move, cmove):
-    #code here
-
-#function name: get_full_move
-#   arguments: a single letter move 'r','p', or 's'
-#   purpose: returns the "full" word of a given move
-#   returns: returns a string based on the following:
-#               "Rock" if given "r"
-#               "Paper" if given "p"
-#               "Scissors" if given "s"
+    if p1move == 'r' and compmove == 's':
+        return "player"
+    elif p1move == 'p' and compmove == 'r':
+       return "player"
+    elif p1move == 's' and compmove == 'p':
+      return "player"
+    elif p1move == 's' and compmove == 'r':
+      return "computer"
+    elif p1move == 'r' and compmove == 'p':
+       return "computer"
+    elif p1move == 'p' and compmove == 's':
+       return "computer"
+    elif p1move == 's' and compmove == 's':
+       return "tie"
+    elif p1move == 'p' and compmove == 'p':
+       return "tie"
+    elif p1move == "r" and compmove == 'r':
+       return "tie"
+    
 def get_full_move(shortmove):
-    #code here
+    if shortmove == 'r':
+        return "Rock"
+    if shortmove == 'p':
+        return "Paper"
+    if shortmove == 's':
+        return "Scissors"
+        
 
 #function name: print_score
 #   arguments: player score, computer score, number of ties
