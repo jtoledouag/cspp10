@@ -38,21 +38,21 @@ def get_round_winner(p1move, cmove):
     if p1move == 'r' and compmove == 's':
         return "player"
     elif p1move == 'p' and compmove == 'r':
-       return "player"
+      return "player"
     elif p1move == 's' and compmove == 'p':
       return "player"
     elif p1move == 's' and compmove == 'r':
       return "computer"
     elif p1move == 'r' and compmove == 'p':
-       return "computer"
+      return "computer"
     elif p1move == 'p' and compmove == 's':
-       return "computer"
+      return "computer"
     elif p1move == 's' and compmove == 's':
-       return "tie"
+      return "tie"
     elif p1move == 'p' and compmove == 'p':
-       return "tie"
+      return "tie"
     elif p1move == "r" and compmove == 'r':
-       return "tie"
+      return "tie"
     
 def get_full_move(shortmove):
     if shortmove == 'r':
@@ -64,23 +64,22 @@ def get_full_move(shortmove):
         
 
 #function name: print_score
-#   arguments: player score, computer score, number of ties
-#   purpose: prints the scoreboard
-#   returns: none
 def print_score(pscore, cscore, ties):
-    #code here
+    print("you have to {} points \n the computer has {} points \n you guys are tied {} times:". format(pscore,cscore,ties)
+    
+    
+    
+
 
 #function name: rps
 #   arguments: none
 #   purpose: the main game loop.  This should be the longest, using
 #               all the other functions to create RPS
 #   returns: none
-def rps():    #code here
+def rps():
 rounds = get_rounds()
-#function name: tests
 p1move = get_p1_move()
-compmove = get_comp_move()
-#               with 'tests' to run this function instead of the game loop
+compmove = get_comp_move() 
 winner= get_round_winner(p1move,compmove)
 if winner == "player":
     print("player won !")
