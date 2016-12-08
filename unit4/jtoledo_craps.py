@@ -21,3 +21,4 @@ roll2dice()
 #   returns: the result
 #       if player wins: return "win"
 #       if player lost: return "lose"
+def roll_result():
