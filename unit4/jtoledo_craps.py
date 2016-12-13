@@ -1,4 +1,5 @@
 import random
+bank_amount = 100
 # function name: roll2dice
 #    purpose: generating two random dice rolls and prints out, and returns the sum
 #   arguments: none
@@ -21,4 +22,15 @@ roll2dice()
 #   returns: the result
 #       if player wins: return "win"
 #       if player lost: return "lose"
-def roll_result():
+rollresult()
+
+
+#   function name: update_bank
+#   purpose
+
+
+
+
+
+
+
