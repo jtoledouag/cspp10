@@ -1,9 +1,14 @@
 import random
 bank_amount = 100
-# function name: roll2dice
-#    purpose: generating two random dice rolls and prints out, and returns the sum
-#   arguments: none
-#   returns: the sum of the two dice 
+
+
+def rules(bank_amount):
+    if bank_amount < 0:
+        return "You have nothing!"
+    elif bank_amount > 0:
+        return input(int(" How much would you like to bet?"))
+
+
 
 def roll2dice():
     dice1 = random.randint(1,6)
@@ -14,19 +19,13 @@ def roll2dice():
 
 roll2dice()
 
-#   function name: roll_result
-#   purpose: get the result of the roll
-#   arguments: 
-#       roll - the sum of the two dice rolled
-#       is_first_roll - true/false depending on which roll it is
-#   returns: the result
-#       if player wins: return "win"
-#       if player lost: return "lose"
-rollresult()
+ 
 
 
 #   function name: update_bank
-#   purpose
+#   purpose: change bank amount based on wheather the player won or not
+#   argument: none 
+
 
 
 
