@@ -60,10 +60,7 @@ def craps():
 
 craps()
 
-#while bank amount >0:
-  #  bet = get_bet(bank_amount)
-   # rol12dice = get_roll2dice()
-  #  dice_sum = roll2dice
+
     
 
 
