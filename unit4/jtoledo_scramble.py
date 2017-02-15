@@ -2,12 +2,9 @@ import random
 
 def scramble_word(word):
 #Get the first letter in a word
-    i = 0
-    s = ""
-    s[i]
+
 #Get the last leter in the word
-    s = ""
-    last_index = s[-1]
+    
 #Select the middle letters
 
 #Turn middle letters into a list
